@@ -15,6 +15,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import animate from 'tailwindcss-animate';
+import { inputBackgroundColors } from '../components/Input/Input.styles';
 import { switchBackgroundColors } from '../components/Switch/Switch.styles';
 
 export default {
@@ -32,7 +33,10 @@ export default {
             },
         },
         extend: {
-            backgroundColor: switchBackgroundColors,
+            backgroundColor: {
+                ...inputBackgroundColors,
+                ...switchBackgroundColors,
+            },
             colors: {
                 // Legacy
                 'neutral-1': 'var(--neutral-1)',
@@ -154,8 +158,6 @@ export default {
                 'checkbox-check': 'var(--checkbox-check)',
 
                 // 'input-label': 'var(--input-label)',
-                'input-fill': 'var(--input-fill)',
-                'input-fill-disabled': 'var(--input-fill-disabled)',
                 'input-border-default': 'var(--input-border-default)',
                 // 'input-border-hover': 'var(--input-border-hover)',
                 'input-border-disabled': 'var(--input-border-disabled)',

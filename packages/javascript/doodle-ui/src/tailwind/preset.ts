@@ -46,7 +46,16 @@ export default {
                 ...buttonBorderColors,
                 ...menuBorderColors,
             },
-            textColor: menuTextColors,
+            textColor: {
+                ...menuTextColors,
+                main: 'var(--text-main)',
+                light: 'var(--text-light)',
+                muted: 'var(--text-muted)',
+                disabled: 'var(--text-disabled)',
+                contrast: 'var(--contrast)',
+                inverse: 'var(--text-contrast)',
+                faint: 'var(--text-faint)',
+            },
             colors: {
                 ...badgeColors,
 
@@ -85,13 +94,6 @@ export default {
                 'tertiary-main':
                     'var(--tertiary-main)' /* failsafe for any classes possibly using the optional '-main' suffix*/,
                 'tertiary-variant': 'var(--tertiary-variant)',
-
-                'text-main': 'var(--text-main)',
-                'text-light': 'var(--text-light)',
-                'text-muted': 'var(--text-muted)',
-                'text-disabled': 'var(--text-disabled)',
-                'text-contrast': 'var(--text-contrast)',
-                faint: 'var(--text-faint)',
 
                 // 'text-primary': 'var(--text-primary)',
                 // 'text-secondary': 'var(--text-secondary)',
